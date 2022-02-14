@@ -1,0 +1,91 @@
+body {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+table {
+    margin: auto auto 15px 40px;
+    border-spacing: 0;
+}
+
+th, td {
+    padding: 5px 10px;
+    border-top-width: 0;
+    border-left-width: 0;
+}
+
+th:last-child, td:last-child {
+    border-right-width: 0;
+    min-width: 90px;
+}
+
+tr:last-child td {
+    border-bottom-width: 0;
+}
+
+.figures {
+    display: inline-block;
+}
+
+figure {    
+    margin-bottom: 25px;
+}
+
+.frame {
+    box-sizing: border-box;
+    width: 150px;
+    height: 150px;
+    border: 0.5px dotted black;
+}
+
+.relative {
+    position: relative;
+    top: 25px;
+    left: 25px;
+}
+
+.absolute {
+    position: absolute;
+    top: 800px;
+    left: 700px;
+}
+
+.box {
+    box-sizing: border-box;
+    width: 50px;
+    height: 50px;
+    border: 0.5px solid black;
+}
+
+.black {
+    background-color: black;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.red {
+    background-color: red;
+}
+
+p {
+    font-size: 10.5px;
+    padding-left: 2px;
+    margin-top: 5px;
+}
+
+figcaption {
+    margin-top: 5px;
+    text-align: left;
+}
+
+.code {
+    font-family: monospace;
+    background: rgb(231, 231, 231);
+}

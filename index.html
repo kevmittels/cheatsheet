@@ -4,9 +4,104 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Display and Position</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <title>Position property</title>
 </head>
 <body>
+
+  <header>
+    <h1>The <span class="code">position</span> property in CSS</h1>
+  </header>
+
+  <table>
+    <thead>
+      <th>Value</th>
+      <th>Effect</th>
+      <th>Final position</th>
+      <th>Example</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="code">static</span></td>
+        <td>Positioned according to normal flow</td>
+        <td>
+          <span class="code">top</span>, <span class="code">right</span>, 
+          <span class="code">bottom</span>, <span class="code">left</span>, 
+          and <span class="code">z-index</span> have no effect
+        </td>
+        <td>See Figure 1</td>
+      </tr>
+      <tr>
+        <td><span class="code">relative</span></td>
+        <td>Positioned according to normal flow</td>
+        <td>Relative to itself</td>
+        <td>See Figure 2</td>
+      </tr>
+      <tr>
+        <td><span class="code">absolute</span></td>
+        <td>Removed from normal flow</td>
+        <td>
+          Relative to its closest positioned ancestor, if any; otherwise, 
+          relative to initial containing block
+        </td>
+        <td>See Figure 3</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <section class="figures">
+
+    <figure>
+      <div class="frame">
+        <div class="box black"></div>
+        <div class="box yellow"></div>
+        <div class="box red"></div>
+      </div>
+      <figcaption>
+        Figure 1. Static (default) positioning of three boxes<br>
+        (<span class="code">&lt;div&gt;</span> 
+        tags of 50px x 50px each)
+      </figcaption>
+    </figure>
+
+    <figure>
+      <div class="frame">
+        <div class="box black"></div>
+        <div class="box yellow relative">
+          <p>top: 25px</p>
+          <p>left: 25px</p>
+        </div>
+        <div class="box red"></div>
+      </div>
+      <figcaption>
+        Figure 2. Relative positioning of yellow box
+      </figcaption>
+    </figure>
+
+    <figure>
+      <div class="frame">
+        <div class="box black"></div>
+        <div class="box yellow absolute">
+          <p>top: 800px</p>
+          <p>left: 700px</p>
+        </div>
+        <div class="box red"></div>
+      </div>
+      <figcaption>
+        Figure 3. Absolute positioning of yellow box
+      </figcaption>
+    </figure>
+
+  </section>
+
+  <!-- <section>
+    <p>Property: position</p>
+    <p>Value: static</p>
+    <p>Default: true</p>
+    <p>Positioned according to normal flow</p>
+    <p>Effect of top/right/z-index: none</p>
+
+  </section>
 
   <header>
     <h1>Display and Position</h1>
@@ -14,6 +109,9 @@
 
   <section>
     <h2>Display</h2>
+    <p>The display CSS property sets whether an element is treated as a block or inline element and the layout used for its children, such as flow layout, grid or flex.</p>
+    <p>Changing an element's display value changes the formatting context of its <em>direct</em> children.</p>
+    <p>What grid and flexbox demonstrate, however, is that an element has both an outer and an inner display type. The outer display type describes whether the element is block-level or inline-level. The inner display type describes how the children of that box behave.</p>
     <p>Inline elements display in the direction words are displayed in a sentence.</p>
     <p>Block elements display one after the other, as paragraphs do.</p>
     <p>A block on a webpage is an HTML element that appears on a new line, i.e. underneath the preceding element in a horizontal writing mode, and above the following element</p>
@@ -30,12 +128,12 @@
         <tr>
           <td>Inline</td>
           <td>Left to right</td>
-          <td>&lt;a&gt; tag</td>
+          <td>&lt;a&gt; or &lt;span&gt; tag</td>
         </tr>
         <tr>
           <td>Block</td>
           <td>Top to bottom</td>
-          <td>&lt;p&gt; tag</td>
+          <td>&lt;p&gt; or &lt;h1&gt; tag</td>
         </tr>
       </tbody>
     </table>
@@ -60,7 +158,7 @@
       
       An element is called out of flow if it is floated, absolutely positioned, or is the root element. An element is called in-flow if it is not out of the flow.
     </p>  
-  </section>
+  </section> -->
 
 </body>
 </html>
